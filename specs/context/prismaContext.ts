@@ -1,11 +1,10 @@
 
 import { join } from "path";
 import { execSync } from "child_process";
-import {PrismaClient} from "@prisma/client";
+import prismaClient from '../../prisma/index';
 
 export function prismaTestContext() {
   const prismaBinary = join(__dirname, "..", "..", "node_modules", ".bin", "prisma");
-  const prismaClient = new PrismaClient();
   return {
     async before() {
       process.env.DATABASE_URL = process.env.TESTING_DATABASE_URL;
