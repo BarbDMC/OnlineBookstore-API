@@ -4,12 +4,12 @@ import { prismaTestContext } from './context/prismaContext';
 import { findAllUsers, findUserById, findUniqueUser } from '../repositories/userRepositoy';
 
 describe('User Repository', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
     const db = await prismaTestContext().before();
     await db.user.createMany({data: [user, user2]});
   });
 
-  afterEach(async () => {
+  afterAll(async () => {
     await prismaTestContext().after();
   });
 

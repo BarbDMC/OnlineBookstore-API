@@ -3,12 +3,12 @@ import { checkUser } from '../services/loginServices';
 import { prismaTestContext } from './context/prismaContext';
 
 describe('Login Services', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
     const db = await prismaTestContext().before();
     await db.user.create({data: user});
   });
 
-  afterEach(async () => {
+  afterAll(async () => {
     await prismaTestContext().after();
   });
 
