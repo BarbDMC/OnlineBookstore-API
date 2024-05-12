@@ -17,6 +17,7 @@ model User {
   secondSurname  String?
   password String
   birthday DateTime
+  role Int
 }
 
 model Book {
