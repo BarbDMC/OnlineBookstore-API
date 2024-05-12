@@ -23,8 +23,8 @@ describe('User Repository', () => {
   describe('findUserById', () => {
     it('should return a user by id', async () => {
       const foundUser = await findUserById(1);
-      expect(foundUser.idUser).toBe(1);
-      expect(foundUser.email).toBe('user@example.com');
+      expect(foundUser?.idUser).toBe(1);
+      expect(foundUser?.email).toBe('user@example.com');
     });
 
     it('should return null if user is not found', async () => {
@@ -36,7 +36,7 @@ describe('User Repository', () => {
   describe('findUniqueUser', () => {
     it('should return a user by email', async () => {
       const foundUser = await findUniqueUser('user2@example.com');
-      expect(foundUser.idUser).toBe(2);
+      expect(foundUser?.idUser).toBe(2);
     });
 
     it('should return null if user is not found', async () => {

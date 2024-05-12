@@ -15,7 +15,7 @@ describe('Login Services', () => {
   describe('When checkUser', () => {
     it('returns an user if find one', async () => {
       const checkedUser = await checkUser('user@example.com');
-      expect(checkedUser.email).toBe('user@example.com');
+      expect(checkedUser?.email).toBe('user@example.com');
     });
 
     it('returns null if the user is not found', async () => {
