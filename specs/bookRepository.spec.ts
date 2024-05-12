@@ -4,6 +4,8 @@ import {
   createBook,
   updateBook,
   deleteBook,
+  findBooksByTitle,
+  findBooksByAuthor,
 } from '../repositories/bookRepository';
 
 import { books } from './fixtures/books';
@@ -81,4 +83,20 @@ describe('Books Repository', () => {
       expect(deletedBook).toBeNull();
     });
   });
+
+
+  describe('findBooksByTitle', () => {
+    it('should return books by title', async () => {
+      const books = await findBooksByTitle('Updated Title');
+      expect(books.length).toBe(1);
+    });
+  });
+
+  describe('findBooksByAuthor', () => {
+    it('should return books by author', async () => {
+      const books = await findBooksByAuthor('New Author');
+      expect(books.length).toBe(1);
+    });
+  });
+
 });
