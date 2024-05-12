@@ -15,6 +15,7 @@ export function prismaTestContext() {
     async after() {
       if (prismaClient) {
         await prismaClient.user.deleteMany({});
+        await prismaClient.book.deleteMany({});
         await prismaClient.$disconnect();
       }
     },

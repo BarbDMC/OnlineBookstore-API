@@ -1,4 +1,3 @@
-import db from '../prisma/index';
 import { user, user2 } from './fixtures/users';
 import { prismaTestContext } from './context/prismaContext';
 import { findAllUsers, findUserById, findUniqueUser } from '../repositories/userRepositoy';
