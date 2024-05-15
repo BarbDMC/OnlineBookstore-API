@@ -37,6 +37,7 @@ const userLogin = async (req: Request, res: Response) => {
         secondSurname: user.secondSurname,
         email: user.email,
         birthday: user.birthday,
+        role: user.role
       },
     },
   );

@@ -8,7 +8,7 @@ export function prismaTestContext() {
   return {
     async before() {
       process.env.DATABASE_URL = process.env.TESTING_DATABASE_URL;
-      execSync(`${prismaBinary} migrate dev --name create_models`, { env: process.env });
+      execSync(`${prismaBinary} migrate dev --name init`, { env: process.env });
 
       return prismaClient;
     },

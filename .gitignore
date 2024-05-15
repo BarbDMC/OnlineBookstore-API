@@ -1,0 +1,22 @@
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+#node
+node_modules
+
+#prisma folder
+prisma/migrations/*
+
+#jest
+coverage
+
+#.env
+.env
