@@ -35,7 +35,7 @@ The following endpoints are available in the API:
 1. Clone the repository:
 
   ```bash
-  git clone https://github.com/your-username/OnlineBookstore-client.git
+  git clone https://github.com/your-username/OnlineBookstore-API.git
   ```
 
 2. Install the dependencies:
