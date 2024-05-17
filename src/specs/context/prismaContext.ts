@@ -4,11 +4,11 @@ import { execSync } from "child_process";
 import prismaClient from '../../prisma/index';
 
 export function prismaTestContext() {
-  const prismaBinary = join(__dirname, "..", "..", "node_modules", ".bin", "prisma");
+  const prismaBinary = join(__dirname, "..", "..", "..", "node_modules", ".bin", "prisma");
   return {
     async before() {
       process.env.DATABASE_URL = process.env.TESTING_DATABASE_URL;
-      execSync(`${prismaBinary} migrate dev --name init`, { env: process.env });
+      execSync(`${prismaBinary} migrate dev --name init --schema=src/prisma/schema.prisma`, { env: process.env });
 
       return prismaClient;
     },

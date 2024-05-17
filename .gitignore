@@ -13,7 +13,7 @@
 node_modules
 
 #prisma folder
-prisma/migrations/*
+src/prisma/migrations/*
 
 #jest
 coverage

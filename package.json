@@ -6,8 +6,8 @@
   "scripts": {
     "migrate": "npx prisma migrate dev --name init",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
-    "dev": "nodemon --exec node --loader ts-node/esm app.ts",
-    "start": "node --loader ts-node/esm app.ts",
+    "dev": "nodemon --exec node --loader ts-node/esm src/app.ts",
+    "start": "node --loader ts-node/esm src/app.ts",
     "seed": "node --loader ts-node/esm prisma/seed.ts"
   },
   "keywords": [],
